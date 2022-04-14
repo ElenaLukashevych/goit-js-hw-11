@@ -22,7 +22,8 @@ const loadMoreBtn = new LoadMoreBtn({
 });
 
 
-const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
+
+const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
 
 
 formEl.addEventListener('submit', onFormSubmit);

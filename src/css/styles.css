@@ -14,9 +14,9 @@ body {
 
 img {
     display: block;
-    width: 340px;
-    height: 260px;
-    margin-right: 20px;
+    height: 250px;
+    max-width: 100%;
+    margin-right: 15px;
 } 
 
 .search-form {
@@ -39,9 +39,14 @@ img {
 .gallery {
     display: flex;
     flex-wrap: wrap;
+  justify-content: center;
 }
 
 a {
     text-decoration: none;
     color: #2a2a2a;
+}
+
+.submit-btn {
+    margin-left: 10px;
 }

@@ -9,7 +9,7 @@ export default class ImageApiService {
 }
 
     async getImages() {
-        console.log(this);
+        // console.log(this);
         const url = `${BASE_URL}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`;
 
         try {
