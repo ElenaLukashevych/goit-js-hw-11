@@ -8,7 +8,7 @@ export default class ImageApiService {
         this.page = 1;
 }
 
-    async fetchImages() {
+    async getImages() {
         console.log(this);
         const url = `${BASE_URL}&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`;
 
@@ -21,7 +21,7 @@ export default class ImageApiService {
 
             
   } catch (error) {
-            console.log(error.message);
+            console.error(error.message);
         }
 
     }
