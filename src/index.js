@@ -23,14 +23,13 @@ const loadMoreBtn = new LoadMoreBtn({
 
 
 
-const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
 
 
 formEl.addEventListener('submit', onFormSubmit);
 
 
 
-function onFormSubmit(event) {
+ function onFormSubmit(event) {
     event.preventDefault();
     imageApiService.resetPage();
     clearContainer();
@@ -85,16 +84,19 @@ function createMarkup(data) {
 
     galleryEl.insertAdjacentHTML('beforeend', image(data.hits));
 
+    const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
+            lightbox.refresh();
+
 };
 
 
 
 
 function onLoadMore() {
-
+    // const lightbox = new SimpleLightbox('.gallery a', { captionDelay: 250, captionsData: 'alt' });
+//   lightbox.refresh();
+    
     imageApiService.getImages().then(createMarkup);
-        lightbox.refresh();
-
 
 };
 
@@ -107,5 +109,7 @@ function onError() {
  Notiflix.Notify.failure("Sorry, there are no images matching your search query. Please try again.");
 
 };
+
+
 
 
